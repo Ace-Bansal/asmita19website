@@ -186,7 +186,7 @@ a {
 
 /* Navbar */
 .site-navbar-wrap {
-  background: #f23a2e !important;
+  background: #f23a2e ;
   position: relative;
   z-index: 99;
   width: 100%; }
@@ -202,7 +202,7 @@ a {
   margin-bottom: 0px;
   width: 100%;
   border-bottom: none;
-  background: #f23a2e !important; }
+  background: #f23a2e ; }
   .site-navbar .site-logo {
     font-weight: 200; }
     .site-navbar .site-logo a {
@@ -1227,3 +1227,63 @@ a {
   .block-trainer:hover:before {
     visibility: visible;
     opacity: 1; }
+
+
+.event-svg {
+  width: 5rem;
+}
+
+/* Togglers */
+#target1 {
+  display: none;
+}
+#target2 {
+  display: none;
+}
+#target3 {
+  display: none;
+}
+#target4 {
+  display: none;
+}
+#target5 {
+  display: none;
+}
+#target6 {
+  display: none;
+}
+#target7 {
+  display: none;
+}
+#target8 {
+  display: none;
+}
+#target9 {
+  display: none;
+}
+#target10 {
+  display: none;
+}
+#target11 {
+  display: none;
+}
+#target12 {
+  display: none;
+}
+#target13 {
+  display: none;
+}
+#target14 {
+  display: none;
+}
+#target15 {
+  display: none;
+}
+#target16 {
+  display: none;
+}
+
+
+.icon-menu {
+  color: #fff;
+}
