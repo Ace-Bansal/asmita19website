@@ -1,111 +1,187 @@
 <?php
   include("header.php");
 ?>
-<div class="ui container">
 
-    <?php
+    <div class="ui container">
+    <form class="ui form" action="registerlogic.php" method="post" style="width: 60%; margin: auto; margin-top: 50px;">
 
-        error_reporting(E_ALL ^ E_NOTICE);     
+        <div class="field">
+         <label>Institute</label>
+         <select name="institute">
+            <option value="">Institutes</option>
+            <option value="ABV-IIITM, Gwalior">ABV-IIITM Gwalior</option>
+            <option value="IIIT Allahabad">IIIT Allahabad</option>
+            <option value="IIITDM Kancheepuram Chennai">IIITDM Kancheepuram, Chennai</option>
+            <option value="IIITDM Jabalpur">IIITDM Jabalpur</option>
+            <option value="IIITDM Kurnool Andhra Pradesh">IIITDM Kurnool, Andhra Pradesh</option>
+            <option value="IIIT Chittoor">IIIT Chittoor</option>
+            <option value="IIIT Guwahati">IIIT Guwahati</option>
+            <option value="IIIT Kalyani">IIIT Kalyani</option>
+            <option value="IIIT Una">IIIT Una</option>
+            <option value="IIIT Vadodara">IIIT Vadodara</option>
+            <option value="IIIT Kota">IIIT Kota</option>
+            <option value="IIIT Tiruchirappalli">IIIT Tiruchirappalli</option>
+            <option value="IIIT Sonepat">IIIT Sonepat</option>
+            <option value="IIIT Manipur	">IIIT Manipur	</option>
+            <option value="IIIT Lucknow">IIIT Lucknow</option>
+            <option value="IIIT Kottayam, Kerala">IIIT Kottayam, Kerala</option>
+            <option value="IIIT Dharward">IIIT Dharward</option>
+            <option value="IIIT Pune">IIIT Pune</option>
+            <option value="IIIT Bhopal">IIIT Bhopal</option>
+            <option value="IIIT Agartala">IIIT Agartala</option>
+            <option value="IIIT Nagpur">IIIT Nagpur</option>
+            <option value="IIIT Ranchi">IIIT Ranchi</option>
+            <option value="IIIT Surat">IIIT Surat</option>
+            <option value="IIIT Bhagalpur">IIIT Bhagalpur</option>
+        </select>
+        </div>
 
+        <div class="ui checkbox" style="padding-bottom: 10px;">
+            <input type="checkbox" name="" id="other_institute">
+            <label>My institute is not listed here.</label>
+        </div>
 
-      include_once("config.php");
+        <div class="field hide" id="hide">
+         <label>Institute</label>
+         <input type="text" name="other_institute" placeholder="Institute">
+        </div>
 
-      if(isset($_POST['submit'])){
+        <div class="field">
+         <label>Name*</label>
+         <input type="text" name="name" placeholder="Name" required>
+        </div>
 
-        if($_POST['other_institute'] != NULL){
-            $institute = $_POST['other_institute'];
-        } else {
-            $institute = $_POST['institute'];
-        }
-        $name = $_POST['name'];
-        $designation = $_POST['designation'];
-        $acad_year = $_POST['acad_year'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $team_name = $_POST['team_name'];
-        $team_size = $_POST['team_size'];
+        <div class="field">
+         <label>Designation</label>
+         <input type="text" name="designation" placeholder="Designation">
+        </div>
 
-        //EVENTS
-        $athletics = $_POST['athletics'];
-        $aquatics = $_POST['aquatics'];
-        $cricket = $_POST['cricket'];
-        $football = $_POST['football'];
-        $volleyball = $_POST['volleyball'];
-        $basketball = $_POST['basketball'];
-        $badminton = $_POST['badminton'];
-        $chess = $_POST['chess'];
-        $carrom = $_POST['carrom'];
-        $squash = $_POST['squash'];
-        $table_tennis = $_POST['table_tennis'];
-        $lawn_tennis = $_POST['lawn_tennis'];
-        $snooker = $_POST['snooker'];
-        $power_lifting = $_POST['power_lifting'];
-        $pubg = $_POST['pubg'];
+        <div class="field">
+         <label>Academic Year</label>
+         <input type="text" name="acad_year" placeholder="Academic Year">
+        </div>
 
-        $events = "";
+        <div class="field">
+         <label>Email*</label>
+         <input type="email" name="email" placeholder="Email" required>
+        </div>
 
-        if($athletics != NULL){
-            $events = $events."Athletics <br>";
-        }
-        if($aquatics != NULL){
-            $events = $events."Aquatics <br>";
-        }
-        if($cricket != NULL){
-            $events = $events."Cricket <br>";
-        }
-        if($football != NULL){
-            $events = $events."Football <br>";
-        }
-        if($volleyball != NULL){
-            $events = $events."Volleyball <br>";
-        }
-        if($basketball != NULL){
-            $events = $events."Basketball <br>";
-        }
-        if($badminton != NULL){
-            $events = $events."Badminton <br>";
-        }
-        if($chess != NULL){
-            $events = $events."Chess <br>";
-        }
-        if($carrom != NULL){
-            $events = $events."Carrom <br>";
-        }
-        if($squash != NULL){
-            $events = $events."Squash <br>";
-        }
-        if($table_tennis != NULL){
-            $events = $events."Table Tennis <br>";
-        }
-        if($lawn_tennis != NULL){
-            $events = $events."Lawn Tennis <br>";
-        }
-        if($snooker != NULL){
-            $events = $events."Snooker <br>";
-        }
-        if($power_lifting != NULL){
-            $events = $events."Power Lifting <br>";
-        }
-        if($pubg != NULL){
-            $events = $events."PUBG <br>";
-        }
+        <div class="field">
+         <label>Phone*</label>
+         <input type="number" name="phone" placeholder="Phone" required>
+        </div>
 
+        <div class="field">
+         <label>Team Name / Captain Name / Contingent Leader*</label>
+         <input type="text" name="team_name" placeholder="Team Name / Captain Name / Contingent Leader" required>
+        </div>
 
-        // var_dump($trial);
+        <div class="field">
+         <label>Team Size*</label>
+         <input type="text" name="team_size" placeholder="Team Size" required>
+        </div>
 
-        $sql = "INSERT INTO pdotrial1(institute, name, designation, acad_year, email, phone, team_name, team_size, athletics, aquatics, cricket, football, volleyball, basketball, badminton, chess, carrom, squash, table_tennis, lawn_tennis, snooker, power_lifting, pubg, events) VALUES(:institute, :name, :designation, :acad_year, :email, :phone, :team_name, :team_size, :athletics, :aquatics, :cricket, :football, :volleyball, :basketball, :badminton, :chess, :carrom, :squash, :table_tennis, :lawn_tennis, :snooker, :power_lifting, :pubg, :events)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(["institute" => $institute, "name" => $name, "designation" => $designation, "acad_year" => $acad_year, "email" => $email, "phone" => $phone, "team_name" => $team_name, "team_size" => $team_size, "athletics" => $athletics, "aquatics" => $aquatics, "cricket" => $cricket, "football" => $football, "volleyball" => $volleyball, "basketball" => $basketball, "badminton" => $badminton, "chess" => $chess, "carrom" => $carrom, "squash" => $squash, "table_tennis" => $table_tennis, "lawn_tennis" => $lawn_tennis, "snooker" => $snooker, "power_lifting" => $power_lifting, "pubg" => $pubg, "events" => $events]);
+        <div class="grouped fields">
+            <h3><label>Select you events*:</label></h3>
+                <div class="field">
+                    <div class="ui checked checkbox">
+                        <input type="checkbox" id="event" name="athletics" value=1>
+                        <label>Athletics</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="aquatics" value=1>
+                        <label>Aquatics</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="cricket" value=1>
+                        <label>Cricket</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="football" value=1>
+                        <label>Football</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="volleyball" value=1>
+                        <label>Volleyball</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="basketball" value=1>
+                        <label>Basketball</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="badminton" value=1>
+                        <label>Badminton</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="chess" value=1>
+                        <label>Chess</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="carrom" value=1>
+                        <label>Carrom</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="squash" value=1>
+                        <label>Squash</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="table_tennis" value=1>
+                        <label>Table Tennis</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="lawn_tennis" value=1>
+                        <label>Lawn Tennis</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="snooker" value=1>
+                        <label>Snooker</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="power_lifting" value=1>
+                        <label>Power Lifting</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="pubg" value=1>
+                        <label>PUBG</label>
+                    </div>
+                </div>
+
+        </div>
         
-        echo "<h1>Thanks for registering!</h1>";
 
-        // echo "registered";
-        // echo '<script>window.location.href = "index.html";</script>';
-      }
-     ?>
+      <button class="ui button" id="submit" type="submit" name="submit" value="Add" style="width:100%;">Submit</button>
 
-     
+     </form>
    </div>
+
    <?php
-     include("footer.php");
-   ?>
+  include("footer.php");
+?>
