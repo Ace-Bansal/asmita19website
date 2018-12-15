@@ -186,7 +186,7 @@ a {
 
 /* Navbar */
 .site-navbar-wrap {
-  background: #f23a2e ;
+  background: #0066b3 ;
   position: relative;
   z-index: 99;
   width: 100%; }
@@ -202,7 +202,7 @@ a {
   margin-bottom: 0px;
   width: 100%;
   border-bottom: none;
-  background: #f23a2e ; }
+  background: #0066b3 ; }
   .site-navbar .site-logo {
     font-weight: 200; }
     .site-navbar .site-logo a {
@@ -224,7 +224,7 @@ a {
         padding: 10px 10px;
         text-transform: uppercase;
         letter-spacing: .05em;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(255, 255, 255, 1);
         font-size: 15px;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
