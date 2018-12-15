@@ -81,8 +81,12 @@
          <input type="text" name="team_size" placeholder="Team Size" required>
         </div>
 
-        <div class="grouped fields">
-            <h3><label>Select you events*:</label></h3>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                <div class="grouped fields">
+            <h3><label>Select events for boys*:</label></h3>
                 <div class="field">
                     <div class="ui checked checkbox">
                         <input type="checkbox" id="event" name="athletics" value=1>
@@ -174,8 +178,106 @@
                     </div>
                 </div>
 
+        </div> 
+    </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="grouped fields">
+            <h3><label>Select events for girls*:</label></h3>
+                <div class="field">
+                    <div class="ui checked checkbox">
+                        <input type="checkbox" id="event" name="athletics_girls" value=1>
+                        <label>Athletics</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="aquatics_girls" value=1>
+                        <label>Aquatics</label>
+                    </div>
+                </div>
+                <!-- <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="cricket" value=1>
+                        <label>Cricket</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="football" value=1>
+                        <label>Football</label>
+                    </div>
+                </div> -->
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="volleyball_girls" value=1>
+                        <label>Volleyball</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="basketball_girls" value=1>
+                        <label>Basketball</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="badminton_girls" value=1>
+                        <label>Badminton</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="chess_girls" value=1>
+                        <label>Chess</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="carrom_girls" value=1>
+                        <label>Carrom</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="squash_girls" value=1>
+                        <label>Squash</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="table_tennis_girls" value=1>
+                        <label>Table Tennis</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="lawn_tennis_girls" value=1>
+                        <label>Lawn Tennis</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="snooker_girls" value=1>
+                        <label>Snooker</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="power_lifting_girls" value=1>
+                        <label>Power Lifting</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="event" name="pubg_girls" value=1>
+                        <label>PUBG</label>
+                    </div>
+                </div>
+
         </div>
-        
+                </div>
+            </div>
+        </div>
 
       <button class="ui button" id="submit" type="submit" name="submit" value="Add" style="width:100%;">Submit</button>
 

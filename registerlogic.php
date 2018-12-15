@@ -25,7 +25,7 @@
         $team_name = $_POST['team_name'];
         $team_size = $_POST['team_size'];
 
-        //EVENTS
+        //EVENTS FOR BOYS
         $athletics = $_POST['athletics'];
         $aquatics = $_POST['aquatics'];
         $cricket = $_POST['cricket'];
@@ -42,8 +42,25 @@
         $power_lifting = $_POST['power_lifting'];
         $pubg = $_POST['pubg'];
 
+        //EVENTS FOR GIRLS
+        $athletics_girls = $_POST['athletics_girls'];
+        $aquatics_girls = $_POST['aquatics_girls'];
+        $volleyball_girls = $_POST['volleyball_girls'];
+        $basketball_girls = $_POST['basketball_girls'];
+        $badminton_girls = $_POST['badminton_girls'];
+        $chess_girls = $_POST['chess_girls'];
+        $carrom_girls = $_POST['carrom_girls'];
+        $squash_girls = $_POST['squash_girls'];
+        $table_tennis_girls = $_POST['table_tennis_girls'];
+        $lawn_tennis_girls = $_POST['lawn_tennis_girls'];
+        $snooker_girls = $_POST['snooker_girls'];
+        $power_lifting_girls = $_POST['power_lifting_girls'];
+        $pubg_girls = $_POST['pubg_girls'];
+
+
         $events = "";
 
+//BOYS
         if($athletics != NULL){
             $events = $events."Athletics <br>";
         }
@@ -89,13 +106,54 @@
         if($pubg != NULL){
             $events = $events."PUBG <br>";
         }
+//GIRLS
+        if($athletics_girls != NULL){
+            $events = $events."Athletics (GIRLS) <br>";
+        }
+        if($aquatics_girls != NULL){
+            $events = $events."Aquatics (GIRLS) <br>";
+        }
+        if($volleyball_girls != NULL){
+            $events = $events."Volleyball (GIRLS) <br>";
+        }
+        if($basketball_girls != NULL){
+            $events = $events."Basketball (GIRLS) <br>";
+        }
+        if($badminton_girls != NULL){
+            $events = $events."Badminton (GIRLS) <br>";
+        }
+        if($chess_girls != NULL){
+            $events = $events."Chess (GIRLS) <br>";
+        }
+        if($carrom_girls != NULL){
+            $events = $events."Carrom (GIRLS) <br>";
+        }
+        if($squash_girls != NULL){
+            $events = $events."Squash (GIRLS) <br>";
+        }
+        if($table_tennis_girls != NULL){
+            $events = $events."Table Tennis (GIRLS) <br>";
+        }
+        if($lawn_tennis_girls != NULL){
+            $events = $events."Lawn Tennis (GIRLS) <br>";
+        }
+        if($snooker_girls != NULL){
+            $events = $events."Snooker (GIRLS) <br>";
+        }
+        if($power_lifting_girls != NULL){
+            $events = $events."Power Lifting (GIRLS) <br>";
+        }
+        if($pubg_girls != NULL){
+            $events = $events."PUBG (GIRLS) <br>";
+        }
+
 
 
         // var_dump($trial);
 
-        $sql = "INSERT INTO pdotrial1(institute, name, designation, acad_year, email, phone, team_name, team_size, athletics, aquatics, cricket, football, volleyball, basketball, badminton, chess, carrom, squash, table_tennis, lawn_tennis, snooker, power_lifting, pubg, events) VALUES(:institute, :name, :designation, :acad_year, :email, :phone, :team_name, :team_size, :athletics, :aquatics, :cricket, :football, :volleyball, :basketball, :badminton, :chess, :carrom, :squash, :table_tennis, :lawn_tennis, :snooker, :power_lifting, :pubg, :events)";
+        $sql = "INSERT INTO pdotrial1(institute, name, designation, acad_year, email, phone, team_name, team_size, athletics, aquatics, cricket, football, volleyball, basketball, badminton, chess, carrom, squash, table_tennis, lawn_tennis, snooker, power_lifting, pubg, athletics_girls, aquatics_girls, volleyball_girls, basketball_girls, badminton_girls, chess_girls, carrom_girls, squash_girls, table_tennis_girls, lawn_tennis_girls, snooker_girls, power_lifting_girls, pubg_girls, events) VALUES(:institute, :name, :designation, :acad_year, :email, :phone, :team_name, :team_size, :athletics, :aquatics, :cricket, :football, :volleyball, :basketball, :badminton, :chess, :carrom, :squash, :table_tennis, :lawn_tennis, :snooker, :power_lifting, :pubg, :athletics_girls, :aquatics_girls, :volleyball_girls, :basketball_girls, :badminton_girls, :chess_girls, :carrom_girls, :squash_girls, :table_tennis_girls, :lawn_tennis_girls, :snooker_girls, :power_lifting_girls, :pubg_girls, :events)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(["institute" => $institute, "name" => $name, "designation" => $designation, "acad_year" => $acad_year, "email" => $email, "phone" => $phone, "team_name" => $team_name, "team_size" => $team_size, "athletics" => $athletics, "aquatics" => $aquatics, "cricket" => $cricket, "football" => $football, "volleyball" => $volleyball, "basketball" => $basketball, "badminton" => $badminton, "chess" => $chess, "carrom" => $carrom, "squash" => $squash, "table_tennis" => $table_tennis, "lawn_tennis" => $lawn_tennis, "snooker" => $snooker, "power_lifting" => $power_lifting, "pubg" => $pubg, "events" => $events]);
+        $stmt->execute(["institute" => $institute, "name" => $name, "designation" => $designation, "acad_year" => $acad_year, "email" => $email, "phone" => $phone, "team_name" => $team_name, "team_size" => $team_size, "athletics" => $athletics, "aquatics" => $aquatics, "cricket" => $cricket, "football" => $football, "volleyball" => $volleyball, "basketball" => $basketball, "badminton" => $badminton, "chess" => $chess, "carrom" => $carrom, "squash" => $squash, "table_tennis" => $table_tennis, "lawn_tennis" => $lawn_tennis, "snooker" => $snooker, "power_lifting" => $power_lifting, "pubg" => $pubg, "athletics_girls" => $athletics_girls, "aquatics_girls" => $aquatics_girls, "volleyball_girls" => $volleyball_girls, "basketball_girls" => $basketball_girls, "badminton_girls" => $badminton_girls, "chess_girls" => $chess_girls, "carrom_girls" => $carrom_girls, "squash_girls" => $squash_girls, "table_tennis_girls" => $table_tennis_girls, "lawn_tennis_girls" => $lawn_tennis_girls, "snooker_girls" => $snooker_girls, "power_lifting_girls" => $power_lifting_girls, "pubg_girls" => $pubg_girls, "events" => $events]);
         
         echo "<h1>Thanks for registering!</h1>";
 
