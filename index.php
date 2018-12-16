@@ -3,19 +3,23 @@
 ?>
 
   
+
 <!-- Landing -->
-      <div class="site-blocks-cover" style="background-image: url(images/landing.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+<div class="site-blocks-cover" style="background-image: url(images/landing.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center" data-aos="fade">
               <h1><strong>Inter IIIT</strong> Sports Meet</h1>
               <h1><strong>Asmita</strong> 2019</h1>
-              <a href="register.php" class="btn btn-primary" style="background: #00e600; border-color: #00e600">Register for Events</a>              
+              <h1 style="padding-top: 1.5rem;" class=" px-4">February <strong>14 - 17,</strong> 2019</h1>
+              <p  style="padding-top: 1.5rem;"><a href="register.php" target="_blank" id="special-button" class="btn btn-primary pill text-white px-4">Register for Events</a></p>
+              <!-- <a href="register.php" class="btn btn-primary" style="background: #00e600; border-color: #00e600">Register for Events</a>               -->
             </div>
           </div>
         </div>
       </div>  
 <!-- Landing ends -->
+
 
 <!-- About us -->
     <div class="site-section">

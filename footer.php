@@ -1,7 +1,6 @@
 </div>
 <footer class="site-footer bg-light" id="contact">
       <div class="container">
-        
 
         <div class="row">
           <div class="col-12">
@@ -10,74 +9,121 @@
               </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-12">
-                <h3 class="footer-heading mb-4 text-primary" style="text-align: center;">Address</h3>
-              </div>
+        <div class="row" style="padding-top: 2rem;">
+            <div class="col-md-6">
+                <div id='map' style='width: 100%; height: 550px;'></div>
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoiZmFsY29uaXMiLCJhIjoiY2pwcmJsbGdtMDIwMTQzcW9iem95Y3JwMiJ9.ZMuieD007uiLhCAT-TfeIg';
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/mapbox/streets-v9',
+                        center: [81.77278,25.42894],
+                        zoom: 17,
+                        pitch: 40, // pitch in degrees
+                    });
+                    
+                    map.addControl(new MapboxDirections({
+                        accessToken: mapboxgl.accessToken
+                    }), 'top-left');
+                    // Add zoom and rotation controls to the map.
+                    map.addControl(new mapboxgl.NavigationControl());
+      
+                    var geojson = {
+                        type: 'Feature',
+                        features: [{
+                          type: 'Feature',
+                          geometry: {
+                            type: 'Point',
+                            coordinates: [81.77278,25.42896]
+                          },
+                          properties: {
+                            title: 'Mapbox',
+                            description: 'Asmita HQ, IIIT-Allahabad, Uttar Pradesh'
+                          }
+                        }]
+                  };
+                  // add markers to map
+                  geojson.features.forEach(function(marker) {
+      
+                  // create a HTML element for each feature
+                  var el = document.createElement('div');
+                  el.className = 'marker';
+      
+                  // make a marker for each feature and add to the map
+                  new mapboxgl.Marker(el)
+                  .setLngLat(marker.geometry.coordinates)
+                  .addTo(map)
+                  .setLngLat(marker.geometry.coordinates)
+                  .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                  .setHTML('<h3>' + 'Welcome!' + '</h3><p>' + marker.properties.description + '</p>'))
+                  .addTo(map);
+                  });
+      
+              </script>
             </div>
-            <div class="row">
-                <div class="col-12">
-                  <p style="text-align: center;"><i class="fas fa-map-marked-alt"></i> ASMITA Headquarters
-                    <br>
-                    IIIT-Allahabad, Jhalwa, Uttar Pradesh - 211015
-                  </p>
-                </div>
-              </div>
-          </div>
-
-          <div class="col-md-4">
-              <div class="row">
-                <div class="col-12">
-                  <h3 class="footer-heading mb-4 text-primary" style="text-align: center;">Phone</h3>
-                </div>
-              </div>
-              <div class="row">
-                  <div class="col-12">
-                    <p style="text-align: center;"><i class="fas fa-question-circle"></i> Registrations & Enquiry:
-                      <br>
-                      +91 90130 27631 - Nishant Malik
-                    </p>
-                    <p style="text-align: center;"><i class="fas fa-users"></i> Public Relations:
-                      <br>
-                      +91 98314 74771 - Upendra Badnena
-                    </p>
-                    <p style="text-align: center;"><i class="fas fa-calendar-check"></i> Events & Management:
-                      <br>
-                      +91 77069 04885 - Manavdeep Singh
-                    </p>
-                  </div>
-                </div>
-            </div> 
-            <div class="col-md-4">
-                <div class="row">
-                  <div class="col-12">
-                    <h3 class="footer-heading mb-4 text-primary" style="text-align: center;">Email</h3>
-                  </div>
-                </div>
+            <div class="col-md-6">
                 <div class="row">
                     <div class="col-12">
-                      <p style="text-align: center;"><i class="fas fa-envelope"></i> asmita@iiita.ac.in
-                    </div>
-                </div>
-    
-    
-                <div class="row" style="padding-top: 1.5rem;">
-                    <div class="col-12">
-                      <h3 class="footer-heading mb-4 text-primary" style="text-align: center;">Follow Us</h3>
+                      <h3 class="footer-heading mb-4 text-primary" style="text-align: center;">Address</h3>
                     </div>
                   </div>
                   <div class="row">
                       <div class="col-12">
-                          <p style="text-align: center;">
-                              <a href="facebook.com/asmitaiiita" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                              <a href="instagram.com/asmita_iiita" class="p-2"><span class="icon-instagram"></span></a>
-                            </p>
+                        <p style="text-align: center;"><i class="fas fa-map-marked-alt"></i> ASMITA Headquarters
+                          <br>
+                          IIIT-Allahabad, Jhalwa, Uttar Pradesh - 211015
+                        </p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12" style="padding-top: 2rem;">
+                        <h3 class="footer-heading mb-4 text-primary" style="text-align: center;">Phone</h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                          <p style="text-align: center;"><i class="fas fa-question-circle"></i> Registrations & Enquiry:
+                            <br>
+                            +91 90130 27631 - Nishant Malik
+                          </p>
+                          <p style="text-align: center;"><i class="fas fa-users"></i> Public Relations:
+                            <br>
+                            +91 98314 74771 - Upendra Badnena
+                          </p>
+                          <p style="text-align: center;"><i class="fas fa-calendar-check"></i> Events & Management:
+                            <br>
+                            +91 77069 04885 - Manavdeep Singh
+                          </p>
                         </div>
                   </div>
-            </div>         
+                  <div class="row" style="padding-top: 2rem;">
+                      <div class="col-12">
+                        <h3 class="footer-heading mb-4 text-primary" style="text-align: center;">Email</h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                          <p style="text-align: center;"><i class="fas fa-envelope"></i> asmita@iiita.ac.in
+                        </div>
+                    </div>
+        
+        
+                    <div class="row" style="padding-top: 2rem;">
+                        <div class="col-12">
+                          <h3 class="footer-heading mb-4 text-primary" style="text-align: center;">Follow Us</h3>
+                        </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-12">
+                              <p style="text-align: center;">
+                                  <a href="facebook.com/asmitaiiita" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                                  <a href="instagram.com/asmita_iiita" class="p-2"><span class="icon-instagram"></span></a>
+                                </p>
+                            </div>
+                    </div>
+            </div>
         </div>
+
 
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
@@ -114,6 +160,7 @@
 <script src="js/aos.js"></script>
 <script src="js/scroller.js"></script>
 <script src="js/main.js"></script>
-  
+
 </body>
 </html>
+

@@ -9,7 +9,7 @@
           <div class="col-md-7 text-center">
             <h1 class="mb-5">Events</h1>
             <!-- position relative, left 50% transform: translateX(-50%) -->
-            <p><a href="docs/Events.pdf" target="_blank" class="btn btn-primary pill text-white px-4" style="font-size: 1.5rem; background-color: rgba(20,0,60, 0.2); border-color: #fff;">Events Brochure</a></p>
+            <p><a href="docs/Events.pdf" target="_blank" id="special-button" class="btn btn-primary pill text-white px-4">Events Brochure</a></p>
           </div>
         </div>
       </div>
