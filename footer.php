@@ -116,8 +116,8 @@
                       <div class="row">
                           <div class="col-12">
                               <p style="text-align: center;">
-                                  <a href="facebook.com/asmitaiiita" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                                  <a href="instagram.com/asmita_iiita" class="p-2"><span class="icon-instagram"></span></a>
+                                  <a href="https://www.facebook.com/asmitaiiita" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                                  <a href="https://www.instagram.com/asmita_iiita/" class="p-2"><span class="icon-instagram"></span></a>
                                 </p>
                             </div>
                     </div>
