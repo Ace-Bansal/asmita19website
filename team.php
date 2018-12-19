@@ -505,7 +505,7 @@
                               
                                           <div class="col-lg-4 mb-4">
                                             <div class="block-trainer">
-                                              <img src="images/team/anony.png" alt="Image" class="img-fluid">
+                                              <img src="images/team/ritik.jpg" alt="Image" class="img-fluid">
                                               <div class="block-trainer-overlay" style="width: 100%">
                                                 <h2>Ritik Raj</h2>
                                                 <p class="text-white">Filming</p>
