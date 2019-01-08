@@ -27,7 +27,7 @@
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-5 mb-5 mb-lg-0">
             <h2 class="mb-3 text-uppercase">All About <strong class="text-black font-weight-bold">Inter IIIT 2019</strong></h2>
-            <p class="lead">IIT Allahabad will be hosting the Inter-IIT sports meet in 2019, under the aegis of <strong>"Beyond Twenty by 2020"</strong>.
+            <p class="lead">IIIT Allahabad will be hosting the Inter-IIIT sports meet in 2019, under the aegis of <strong>"Beyond Twenty by 2020"</strong>.
             <br>
             This will be the <strong>third edition</strong> in the series with the first two being sucessfully hosted in IIITDM Kancheepuram and ABV-IIITM Gwallior.
             <br>
