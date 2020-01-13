@@ -1320,3 +1320,7 @@ a {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+
+.head{
+  margin-top: -100px;
+}

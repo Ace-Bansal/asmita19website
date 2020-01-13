@@ -84,15 +84,15 @@
                         <div class="col-12">
                           <p style="text-align: center;"><i class="fas fa-question-circle"></i> Registrations & Enquiry:
                             <br>
-                            +91 90130 27631 - Nishant Malik
+                            +91 9205325547 - Divyansh Tripathi
                           </p>
                           <p style="text-align: center;"><i class="fas fa-users"></i> Public Relations:
                             <br>
-                            +91 98314 74771 - Upendra Badnena
+                            +91 8770347157 - Prasoon Maheshwari
                           </p>
                           <p style="text-align: center;"><i class="fas fa-calendar-check"></i> Events & Management:
                             <br>
-                            +91 77069 04885 - Manavdeep Singh
+                            +91 8586044965 - Arnav Agarwal
                           </p>
                         </div>
                   </div>
